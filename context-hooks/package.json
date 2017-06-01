@@ -1,0 +1,26 @@
+{
+  "name": "functionly-plugin-examples-context-hooks",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index",
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "build:watch": "node_modules/.bin/tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaystack/functionly-plugin-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaystack/functionly-plugin-examples/issues"
+  },
+  "homepage": "https://github.com/jaystack/functionly-plugin-examples#readme",
+  "devDependencies": {
+    "@types/node": "^6.0.46",
+    "typescript": "^2.3.0"
+  },
+  "dependencies": {
+  }
+}

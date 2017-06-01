@@ -2,7 +2,7 @@
 
 ## install
 ```sh
-npm install functionly-plugin-examples-helloworld --save-dev
+npm install functionly-plugin-examples-helloworld-command --save-dev
 ```
 
 
@@ -36,5 +36,21 @@ result:
 > hello John
 > email: John <john@admin.com>
 ```
-
-
+# implementation
+```js
+export default ({ logger }) => {
+    return {
+        commands({ commander }) {
+            commander
+                .command('hello <who>')
+                .option('-e, --email <email>', 'email')
+                .action(async (who, command) => {
+                    logger.info(`hello ${who}`)
+                    if (command.email) {
+                        logger.info(`email: ${who} <${command.email}>`)
+                    }
+                });
+        }
+    }
+}
+```

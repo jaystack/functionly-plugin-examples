@@ -6,7 +6,7 @@ export default ({ logger }) => {
                 .option('-e, --email <email>', 'email')
                 .action(async (who, command) => {
                     logger.info(`hello ${who}`)
-                    if(command.email){
+                    if (command.email) {
                         logger.info(`email: ${who} <${command.email}>`)
                     }
                 });
