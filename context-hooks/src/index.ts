@@ -7,6 +7,13 @@ export default ({ logger }) => {
             "after:tableDiscovery": async (context) => {
                 logger.info("after:tableDiscovery")
             }
+        },
+        deployProviders: {
+            example: {
+                async createEnvironment(context) {
+                    logger.info('example deploy...')
+                }
+            }
         }
     }
 }

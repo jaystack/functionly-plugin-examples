@@ -14,6 +14,8 @@ create a functionly.json file into your project
 - [helloworld-command](https://github.com/jaystack/functionly-plugin-examples/tree/master/helloworld-command)
 ## Hooks
 - [context-hooks](https://github.com/jaystack/functionly-plugin-examples/tree/master/context-hooks)
+## providers
+- [deploy-provider](https://github.com/jaystack/functionly-plugin-examples/tree/master/deploy-provider)
 
 
 
