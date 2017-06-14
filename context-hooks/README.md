@@ -28,24 +28,24 @@ you can set the `debug` property and the overridable context steppes will show f
 }
 ```
 ```sh
-Context step run -----------> serviceDiscovery
-Context step before start     serviceDiscovery
-Context step before end       serviceDiscovery
-Context step start            serviceDiscovery
-Context step end              serviceDiscovery
-Context step after start      serviceDiscovery
-Context step after end        serviceDiscovery
-Context step complete ------> serviceDiscovery
-Context step run -----------> tableDiscovery
-Context step before start     tableDiscovery
-before:tableDiscovery
-Context step before end       tableDiscovery
-Context step start            tableDiscovery
-Context step end              tableDiscovery
-Context step after start      tableDiscovery
-after:tableDiscovery
-Context step after end        tableDiscovery
-Context step complete ------> tableDiscovery
+executor  |   run -----------> ServiceDiscovery
+executor  |   before start     ServiceDiscovery
+executor  |   before end       ServiceDiscovery
+executor  |   start            ServiceDiscovery
+executor  |   end              ServiceDiscovery
+executor  |   after start      ServiceDiscovery
+executor  |   after end        ServiceDiscovery
+executor  |   complete ------> ServiceDiscovery
+executor  |   run -----------> TableDiscovery
+executor  |   before start     TableDiscovery
+before:TableDiscovery
+executor  |   before end       TableDiscovery
+executor  |   start            TableDiscovery
+executor  |   end              TableDiscovery
+executor  |   after start      TableDiscovery
+after:TableDiscovery
+executor  |   after end        TableDiscovery
+executor  |   complete ------> TableDiscovery
 ```
 
 ## implementation
@@ -53,11 +53,11 @@ Context step complete ------> tableDiscovery
 export default ({ logger }) => {
     return {
         hooks: {
-            "before:tableDiscovery": async (context) => {
-                logger.info("before:tableDiscovery")
+            "before:TableDiscovery": async (context) => {
+                logger.info("before:TableDiscovery")
             },
-            "after:tableDiscovery": async (context) => {
-                logger.info("after:tableDiscovery")
+            "after:TableDiscovery": async (context) => {
+                logger.info("after:TableDiscovery")
             }
         }
     }
@@ -71,8 +71,8 @@ modifiers can be
 `default` modifier is skippable, it will replace the step logic
 ```js
 hooks: {
-    "tableDiscovery": (context) => {
-        logger.info("new logic for tableDiscovery")
+    "TableDiscovery": (context) => {
+        logger.info("new logic for TableDiscovery")
     }
 }
 ```

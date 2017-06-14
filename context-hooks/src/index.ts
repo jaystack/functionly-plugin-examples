@@ -1,11 +1,11 @@
 export default ({ logger }) => {
     return {
         hooks: {
-            "before:tableDiscovery": async (context) => {
-                logger.info("before:tableDiscovery")
+            "before:TableDiscovery": async (context) => {
+                logger.info("before:TableDiscovery")
             },
-            "after:tableDiscovery": async (context) => {
-                logger.info("after:tableDiscovery")
+            "after:TableDiscovery": async (context) => {
+                logger.info("after:TableDiscovery")
             }
         },
         deployProviders: {
